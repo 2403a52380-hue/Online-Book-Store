@@ -15,3 +15,13 @@ def search_books(keyword):
         book for book in BOOKS
         if keyword.lower() in book["title"].lower()
     ]
+def search_books(keyword):
+    keyword = keyword.strip().lower()
+
+    if not keyword:
+        return []
+
+    return [
+        book for book in BOOKS
+        if keyword in book["title"].lower()
+    ]
