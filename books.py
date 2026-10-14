@@ -15,3 +15,8 @@ def search_books(keyword):
         book for book in BOOKS
         if keyword.lower() in book["title"].lower()
     ]
+def get_book_by_id(book_id):
+    for book in BOOKS:
+        if book["id"] == book_id:
+            return book
+    return None
